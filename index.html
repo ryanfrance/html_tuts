@@ -19,8 +19,10 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/normalize.css"> <!--Needs to be on top -->
+  <link rel="stylesheet" href="css/skeleton.css"> <!--Needs to be below normalize.css -->
+  <link rel="stylesheet" href="css/main.css">
+
 
   <!-- SCRIPTS
   ---------------------------------------------------->
@@ -41,18 +43,32 @@
   <!--Header
   ------------------------------------------------------>
     <div class="row">
-      
+	    <div class="twelve.columns">
+
+	    </div>
     </div>
 
     <!-- BODY
     ---------------------------------------------------->
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="eight columns">
+	    	<div id="editor">function foo(items) {
+			    var x = "All this is syntax highlighted";
+			    return x;
+			}</div>
       </div>
+
+      <div class="one-third.column frame">
+	      <iframe></iframe>
+      </div>
+
+	  <script>
+		    var editor = ace.edit("editor");
+		    editor.setTheme("ace/theme/monokai");
+		    editor.getSession().setMode("ace/mode/javascript");
+		</script>
     </div>
-  </div>
+  </div> <!-- End of Container -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
