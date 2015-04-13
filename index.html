@@ -52,18 +52,14 @@
     <div class="row">
 
 
-      <div class="eight columns live u-max-full-width u-pull-right">
+      <div class="eight columns u-max-full-width u-pull-right">
 	      <iframe class="frame" src="editorfiles/source.html" id="output-window"></iframe>
       </div>    
     </div>
 
     <div class="row">
-      <div class="six columns u-max-full-width editor">
+      <div class="twelve columns u-max-full-width editor">
         <div id="editor"></div>
-      </div>
-
-      <div class="six columns u-max-full-width editor">
-        <div id="editorCSS"></div>
       </div>
     </div>
 
@@ -87,23 +83,7 @@
           //tooltipFollowsMouse: true,
           enableBasicAutoCompletion: true,
           spellcheck: true,
-        });
-
-        var editor = ace.edit("editorCSS");
-        editor.setTheme("ace/theme/cobalt");
-        editor.getSession().setMode("ace/mode/css");
-        editor.setAutoScrollEditorIntoView(true);
-        editor.setOptions({
-          cursorStyle: "smooth",
-          vScrollBarAlwaysVisible: true,
-          animatedScroll: true,
-          fontSize: "1.1em",
-          minLines: 20,
-          maxLines: 45,
-          //tooltipFollowsMouse: true,
-          enableBasicAutoCompletion: true,
-          spellcheck: true,
-        });            
+        });        
     </script>
     <script type="text/javascript" src="scripts/output.js"></script>
     

@@ -5,20 +5,3 @@ function grabCode() {
 	var code = "<!DOCTYPE html>" + "\n" + document.getElementById("output-window").contentWindow.document.documentElement.outerHTML;
 	editor.getSession().setValue(code);
 }
-
-//jQuery below line
-
-$(function () {
-
-	//Will look for editor class (ace editor)
-	function parseHtml() {
-		var html = $('.editor').val();
-		return html;
-	}
-
-	function parseCSS() {
-		var css = $('.editorCSS').val();
-		return css;
-	}
-
-});
