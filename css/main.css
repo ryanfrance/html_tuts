@@ -1,11 +1,35 @@
-.frame {
-	display: inline-block;
-	float: right;
-	width: 100%;
-	height: 9em;
+h1, h2, h3, h4, h5{
+	color: #c91b26;
 }
 
-.editor {
-    display: inline-block;
-    margin-top: 1.5em;
+.frame {
+	overflow: hidden;
+}
+
+.instructions {
+	border: 1px solid #79a3c1;
+}
+
+.codePane {
+	border: 0.3em solid #fe9601;
+}
+
+.live {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.live h3{
+	margin: 1em;
+}
+
+.live iframe{
+	display: inline-block;
+	width: 100%;
+	height: 30em;
+	border: none;
+}
+
+.codePane {
+	background: #60047a;
 }

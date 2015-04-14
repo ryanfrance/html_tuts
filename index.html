@@ -28,6 +28,7 @@
   ---------------------------------------------------->
   <script type="text/javascript" src="scripts/prefixfree.min.js"></script>
   <script type="text/javascript" src="scripts/ace-builds/src/ace.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -49,23 +50,48 @@
 
     <!-- BODY
     ---------------------------------------------------->
+
+    <!-- OUTPUT -->
     <div class="row">
+		<div class="four columns instructions">
 
+		</div>
 
-      <div class="eight columns live u-max-full-width u-pull-right">
-	      <iframe class="frame" src="editorfiles/source.html" id="output-window"></iframe>
-      </div>    
+	    <div class="eight columns live u-full-width u-pull-right">
+		    <iframe id="output-window">
+				<!--<!DOCTYPE html>
+				<html>
+					<head>
+						<body>
+
+						</body>
+					</head>
+				</html>-->
+		    </iframe>
+		</div>
     </div>
 
-    <div class="row">
-      <div class="six columns u-max-full-width editor">
-        <div id="editor"></div>
-      </div>
+    <!-- EDITORS -->
 
-      <div class="six columns u-max-full-width editor">
-        <div id="editorCSS"></div>
-      </div>
-    </div>
+    <form class="codePane">
+	    <div class="row">
+
+		    <div class="twelve columns live u-max-full-width">
+	   		    <h3>HTML</h3>
+	   			<div class="ace" id="editor"></div>
+		    </div>
+
+	    </div>
+
+	    <div class="row">
+
+		    <div class="twelve columns live u-max-full-width">
+				<h3>CSS</h3>
+		        <div class="ace" id="editorCSS"></div>
+		    </div>
+
+	    </div>
+    </form>
 
   </div> <!-- End of Container -->
 
@@ -78,15 +104,15 @@
         editor.getSession().setMode("ace/mode/html");
         editor.setAutoScrollEditorIntoView(true);
         editor.setOptions({
-          cursorStyle: "smooth",
-          vScrollBarAlwaysVisible: true,
-          animatedScroll: true,
-          fontSize: "1.1em",
-          minLines: 20,
-          maxLines: 45,
-          //tooltipFollowsMouse: true,
-          enableBasicAutoCompletion: true,
-          spellcheck: true,
+	      cursorStyle: "smooth",
+	      vScrollBarAlwaysVisible: false,
+	      animatedScroll: true,
+	      fontSize: "1.3rem",
+	      minLines: 20,
+	      maxLines: 45,
+	      //tooltipFollowsMouse: true,
+	      enableBasicAutoCompletion: true,
+	      spellcheck: true,
         });
 
         var editor = ace.edit("editorCSS");
@@ -95,17 +121,17 @@
         editor.setAutoScrollEditorIntoView(true);
         editor.setOptions({
           cursorStyle: "smooth",
-          vScrollBarAlwaysVisible: true,
+          vScrollBarAlwaysVisible: false,
           animatedScroll: true,
-          fontSize: "1.1em",
+          fontSize: "1.3rem",
           minLines: 20,
           maxLines: 45,
           //tooltipFollowsMouse: true,
           enableBasicAutoCompletion: true,
           spellcheck: true,
-        });            
+        });
     </script>
     <script type="text/javascript" src="scripts/output.js"></script>
-    
+
 </body>
 </html>
