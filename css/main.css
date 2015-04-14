@@ -1,17 +1,19 @@
+html {
+	background: #00b796;
+}
+
 h1, h2, h3, h4, h5{
-	color: #c91b26;
+	color: #fe9601;
 }
 
-.frame {
-	overflow: hidden;
-}
-
+#fe9601
 .instructions {
 	border: 1px solid #79a3c1;
 }
 
 .codePane {
-	border: 0.3em solid #fe9601;
+	height: auto;
+	border: 0.3em solid #c91b26;
 }
 
 .live {
@@ -24,10 +26,12 @@ h1, h2, h3, h4, h5{
 }
 
 .live iframe{
-	display: inline-block;
+	float: right;
 	width: 100%;
 	height: 30em;
-	border: none;
+	border: 0.3em solid #c91b26;
+	border-bottom: none;
+	overflow: hidden;
 }
 
 .codePane {

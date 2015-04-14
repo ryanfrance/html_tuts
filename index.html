@@ -57,7 +57,7 @@
 
 		</div>
 
-	    <div class="eight columns live u-full-width u-pull-right">
+	    <div class="eight columns live grid u-full-width u-pull-right">
 		    <iframe id="output-window">
 				<!--<!DOCTYPE html>
 				<html>
@@ -73,7 +73,7 @@
 
     <!-- EDITORS -->
 
-    <form class="codePane">
+    <form class="codePane grid">
 	    <div class="row">
 
 		    <div class="twelve columns live u-max-full-width">
@@ -98,39 +98,6 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <script>
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/monokai");
-        editor.getSession().setMode("ace/mode/html");
-        editor.setAutoScrollEditorIntoView(true);
-        editor.setOptions({
-	      cursorStyle: "smooth",
-	      vScrollBarAlwaysVisible: false,
-	      animatedScroll: true,
-	      fontSize: "1.3rem",
-	      minLines: 20,
-	      maxLines: 45,
-	      //tooltipFollowsMouse: true,
-	      enableBasicAutoCompletion: true,
-	      spellcheck: true,
-        });
-
-        var editor = ace.edit("editorCSS");
-        editor.setTheme("ace/theme/cobalt");
-        editor.getSession().setMode("ace/mode/css");
-        editor.setAutoScrollEditorIntoView(true);
-        editor.setOptions({
-          cursorStyle: "smooth",
-          vScrollBarAlwaysVisible: false,
-          animatedScroll: true,
-          fontSize: "1.3rem",
-          minLines: 20,
-          maxLines: 45,
-          //tooltipFollowsMouse: true,
-          enableBasicAutoCompletion: true,
-          spellcheck: true,
-        });
-    </script>
     <script type="text/javascript" src="scripts/output.js"></script>
 
 </body>
