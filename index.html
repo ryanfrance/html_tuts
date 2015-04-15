@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="ksceditor.appcache">
 <head>
 
   <!-- Basic Page Needs
@@ -27,7 +27,7 @@
   <!-- SCRIPTS
   ---------------------------------------------------->
   <script type="text/javascript" src="scripts/prefixfree.min.js"></script>
-  <script type="text/javascript" src="scripts/ace-builds/src/ace.js" charset="utf-8"></script>
+  <script type="text/javascript" src="scripts/ace/ace.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- Favicon
@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body onload="grabCode()">
+<body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -58,47 +58,51 @@
 		</div>
 
 	    <div class="eight columns live grid u-full-width u-pull-right">
-		    <iframe id="output-window">
-				<!--<!DOCTYPE html>
-				<html>
-					<head>
-						<body>
-
-						</body>
-					</head>
-				</html>-->
-		    </iframe>
+		    <iframe id="iframe" sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms" allowtransparency="true"></iframe>
 		</div>
     </div>
 
     <!-- EDITORS -->
 
-    <form class="codePane grid">
-	    <div class="row">
+    <div class="codePane grid">
 
-		    <div class="twelve columns live u-max-full-width">
-	   		    <h3>HTML</h3>
-	   			<div class="ace" id="editor"></div>
-		    </div>
+      <div class="row">
+        <div class="twelve columns buttons">
+          <button class="toggleBtn" id="toggleHtml" data-editor="html" title="HTML Toggle">Turn On/Off HTML</button>
+          <button class="toggleBtn" id="toggleCss" data-editor="css" title="CSS Toggle">Turn On/Off CSS</button>
+          <button class="Btn" id="download" title="Download the code">Download Your Website!</button>
+          <button class="Btn" id="save" title="Save Progress">Save</button>
+          <button class="Btn" id="load" title="Load Progress">Load</button>
+          <button class="Btn" id="submit" title="Submit">Run Code</button>
+        </div>
+      </div>
 
-	    </div>
+      <div class="editors">
 
-	    <div class="row">
+  	    <div class="row">
+  		    <div class="twelve columns live html colrow u-max-full-width">
+  	   		    <h3>HTML</h3>
+  	   			<pre id="html"></pre>
+  		    </div>
+  	    </div>
 
-		    <div class="twelve columns live u-max-full-width">
-				<h3>CSS</h3>
-		        <div class="ace" id="editorCSS"></div>
-		    </div>
+  	    <div class="row">
+  		    <div class="twelve columns live css colrow u-max-full-width">
+  				<h3>CSS</h3>
+  		        <div id="css"></div>
+  		    </div>
+  	    </div>
 
-	    </div>
-    </form>
+      </div><!--end of editors -->
+
+    </div>
 
   </div> <!-- End of Container -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <script type="text/javascript" src="scripts/output.js"></script>
+  <script type="text/javascript" src="scripts/output.js?v=42"></script>
 
 </body>
 </html>

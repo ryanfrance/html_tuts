@@ -6,7 +6,6 @@ h1, h2, h3, h4, h5{
 	color: #fe9601;
 }
 
-#fe9601
 .instructions {
 	border: 1px solid #79a3c1;
 }
@@ -36,4 +35,15 @@ h1, h2, h3, h4, h5{
 
 .codePane {
 	background: #60047a;
+}
+
+.buttons {
+	display: inline-block;
+	text-align: center;
+	margin-top: 1%;
+}
+
+button {
+	background: #fe9601;
+
 }
